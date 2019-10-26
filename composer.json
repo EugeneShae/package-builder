@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Shae\\": "src/"
+            "Shae\\PackageBuilder\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -34,10 +34,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Shae\\PackageBuilderServiceProvider"
+                "Shae\\PackageBuilder\\PackageBuilderServiceProvider"
             ],
             "aliases": {
-                "PackageBuilder": "Shae\\PackageBuilderFacade"
+                "PackageBuilder": "Shae\\PackageBuilder\\PackageBuilderFacade"
             }
         }
     }
