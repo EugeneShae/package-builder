@@ -1,0 +1,40 @@
+{
+    "name": "{package_name}",
+    "description": "",
+    "type": "library",
+    "keywords": [
+
+    ],
+    "authors": [],
+    "license": "Apache-2.0",
+    "require": {
+
+    },
+    "require-dev": {
+
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "{namespace}": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "{namespace}ServiceProvider"
+            ],
+            "aliases": {
+                "aliases": "{namespace}Facade"
+            }
+        }
+    }
+}

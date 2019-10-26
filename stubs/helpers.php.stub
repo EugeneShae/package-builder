@@ -1,0 +1,8 @@
+<?php
+
+if (!function_exists('package_path')){
+    function package_path(string $path = ''): string
+    {
+        return app()->basePath(config('packageBuilder.packages_dir')) . ($path ? (DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $path)) : $path);
+    }
+}

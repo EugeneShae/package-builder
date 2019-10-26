@@ -1,0 +1,36 @@
+<?php
+
+namespace {namespace};
+
+use Illuminate\Foundation\AliasLoader;
+
+class ServiceProvider extends \Illuminate\Support\ServiceProvider
+{
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot(): void
+    {
+        // $this->loadMigrationsFrom('path/to');
+        // $this->loadViewsFrom('path/to'), '{name}');
+        // $this->loadTranslationsFrom('path/to', '{name}');
+    }
+
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register(): void
+    {
+        $loader = AliasLoader::getInstance();
+        $loader->alias('{classname}', Facade::class);
+
+        $this->app->singleton('{name}', function ()
+        {
+            return new {classname}();
+        });
+    }
+}
